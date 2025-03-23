@@ -20,7 +20,7 @@ public class PostifyApplication {
 	public void init(){
 		try{
 			System.out.println("Creating super user....");
-			userService.createSuperUser("Bhushan","Bhushan@1234","mahadikbhushan768@gmail.com");
+			userService.createSuperUser("SuperUsername","YourPassword@1234","Youremail@gmail.com");
 			System.out.println("Super user created.");
 		} catch (Exception e) {
 			e.printStackTrace();
