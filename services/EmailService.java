@@ -32,7 +32,7 @@ public class EmailService {
         message.setTo(to);
         message.setSubject(subject);
         message.setText(body);
-        message.setFrom("mahadikbhushan768@gmail.com");
+        message.setFrom("youremail@gmail.com");
         javaMailSender.send(message);
 //        logger.info("Email send successfully to user {}...",to);
         log.info("Email send successfully to user {}...",to);
