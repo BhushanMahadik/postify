@@ -51,7 +51,6 @@ public class UserService {
         Role role = roleService.findByName("ROLE_USER");
         user.setRoles(Set.of(role));
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-//        emailService.sendEmail(user.getEmail(), "Welcome to Postify", "Hello " + user.getUsername() + ",\n\nThank you for registering with us.\n\nBest regards,\nTeam Postify");
         return  userRepository.save(user);
     }
 
@@ -89,12 +88,9 @@ public class UserService {
         if (user != null){
             return  user;
         }
-
         user = userRepository.findById(id).orElseThrow(() ->
                 new ResponseStatusException(HttpStatus.NOT_FOUND,"User with id "+id+" not found"));
-
         redisService.storeData(redisKey, user, 1L, TimeUnit.MINUTES);
-
         return  user;
     }
 
@@ -133,7 +129,6 @@ public class UserService {
         userResponseDto.setId(user.getId());
         System.out.println(user.getUsername());
         userResponseDto.setUsername(user.getUsername());
-//        userResponseDto.setPassword(user.getPassword());
         userResponseDto.setEmail(user.getEmail());
         userResponseDto.setCreatedDate(user.getCreatedDate());
         userResponseDto.setLastModifiedDate(user.getLastModifiedDate());
