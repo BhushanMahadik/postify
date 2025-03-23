@@ -34,5 +34,5 @@ spring:
           auth: true
     host: smtp.gmail.com
     username: youremail@gmail.com
-    password: Yout email app creddentials
+    password: Yout email app credentials
     port: 587
