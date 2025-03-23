@@ -16,7 +16,7 @@ spring:
   datasource:
      url: jdbc:mysql://localhost:3306/postify
      username: root
-     password: Bhushan@9854
+     password: root
   jpa:
     hibernate:
       ddl-auto: update
@@ -33,6 +33,6 @@ spring:
             required: true
           auth: true
     host: smtp.gmail.com
-    username: mahadikbhushan768@gmail.com
-    password: cqjm sduf iifq kuiw
+    username: youremail@gmail.com
+    password: Yout email app creddentials
     port: 587
